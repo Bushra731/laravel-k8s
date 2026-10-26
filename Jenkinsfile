@@ -44,7 +44,7 @@ pipeline {
           sh '''
             kubectl -n laravel get pods,svc
             sleep 5
-            curl -s http://localhost:30080/dbcheck || true
+            curl -s http://192.168.49.2:30080/dbcheck || true
           '''
         }
       }
